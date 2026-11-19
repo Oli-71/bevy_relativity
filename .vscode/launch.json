@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug executable 'bevy_relativity'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=bevy_relativity"
+                ]
+            },
+            "env": {
+                "RUST_BACKTRACE": "1",
+                "BEVY_ASSET_ROOT": "${workspaceFolder}"
+            },
+            "cwd": "${workspaceFolder}",
+            "args": []
+        },
+        {
+            "name": "Release executable 'bevy_relativity' (release-fast)",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--profile=release-fast",
+                    "--bin=bevy_relativity"
+                ],
+                "filter": {
+                    "name": "bevy_relativity",
+                    "kind": "bin"
+                },
+                "cwd": "${workspaceFolder}"
+            },
+            "env": {
+                "RUST_BACKTRACE": "1",
+                "BEVY_ASSET_ROOT": "${workspaceFolder}"
+            },
+            "cwd": "${workspaceFolder}",
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'bevy_relativity'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=bevy_relativity"
+                ]
+            },
+             "env": {
+                "RUST_BACKTRACE": "1",
+                "BEVY_ASSET_ROOT": "${workspaceFolder}"
+            }
+        }
+    ]
+}
